@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+// import PassShowHide from "./PassShowHide";
+// import SignUpForm from "./SignUpForm";
+// import DidMount from "./DidMount";
+// import Keypress from "./Keypress";
+// import Input from "./Input";
+// import GetDataFromUser from "./GetDataFromUser";
+import GetItemsFromList from "./GetItemsFromList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    name: "Click",
+    isClicked: false
+  };
+
+  // clickBtn = () => {
+  //   if(!this.state.isClicked){
+  //     this.setState({ name: "Clicked", isClicked: true });
+  //   }else{
+  //     this.setState({ name: "Click", isClicked: false });
+  //   }
+  // };
+
+  render() {
+    const { name, isClicked } = this.state;
+    return (
+      <div>
+        {/* <button className={isClicked ? "btn_clicked" : "btn"} type="button" onClick={this.clickBtn}>
+          {name}
+        </button> */}
+        {/* <DidMount />
+        {isClicked === false && (<Keypress />)}
+        <Input /> */}
+        {/* <SignUpForm /> */}
+        {/* <PassShowHide /> */}
+        {/* < GetDataFromUser /> */}
+        <GetItemsFromList />
+      </div>
+    );
+  }
 }
 
-export default App;
